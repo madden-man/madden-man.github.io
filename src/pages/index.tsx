@@ -12,7 +12,8 @@ import '../global.css';
 
 const pageStyles = {
   color: '#000000',
-  backgroundColor: '#ffeebd',
+  // backgroundColor: '#ffeebd',
+  backgroundColor: 'rgba(255, 238, 189, 0.62)',
   padding: '3rem',
   borderRadius: '0.5rem',
   maxWidth: '780px',
