@@ -1,0 +1,23 @@
+.no-list-style {
+    list-style-type: none;
+}
+
+html, body {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.bg {
+    background-image: url('./beach.jpeg');
+    background-size: cover;
+    left: 0;
+    min-height: 100vh;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+    z-index: -1;
+}
