@@ -1,8 +1,8 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
-import { Badge, Calendar } from 'antd';
+import { Drawer, Calendar } from 'antd';
 import { EVENT_LIST_BY_DAY } from "../events/eventList";
-import type { Dayjs } from 'dayjs';
+import dayjs, { Dayjs } from 'dayjs';
 import type { CellRenderInfo } from 'rc-picker/lib/interface';
 
 import '../global.css';
@@ -26,8 +26,8 @@ const dateCellRender = (value: Dayjs, ) => {
   return (
     <ul className="events">
       {eventList.map((event) => (
-        <li key={event.description} className="no-list-style">
-          <Badge status="success" text={event.title} />
+        <li key={event.description}>
+          {event.title}
         </li>
       ))}
     </ul>
@@ -37,7 +37,7 @@ const dateCellRender = (value: Dayjs, ) => {
 const monthCellRender = (value: Dayjs) => {
   return (
     <div className="notes-month">
-      <section>The Month!</section>
+      <section>{(value.month() >= 5 && value.month() <= 8) ? 'Summer Fun!' : 'Not So Much!'}</section>
     </div>
   );
 };
@@ -49,11 +49,33 @@ const cellRender = (current: Dayjs, info: CellRenderInfo<Dayjs>) => {
 };
 
 const IndexPage: React.FC<PageProps> = () => {
+  const [currentDay, setCurrentDay] = React.useState(dayjs());
+  const [isOpen, setOpen] = React.useState(false);
+
+  const currentDayInfo = EVENT_LIST_BY_DAY(currentDay);
+
   return (
     <main style={pageStyles}>
       <div className="bg" />
       <h1>DCC Young Adults!</h1>
-      <Calendar cellRender={cellRender}/>
+      <Calendar cellRender={cellRender} onSelect={(date) => { setCurrentDay(date); setOpen(true); }} />
+      <Drawer
+        title={currentDay.format('MMMM D')}
+        onClose={() => setOpen(false)}
+        open={isOpen}
+        placement="bottom"
+        height="378"
+      >
+        {currentDayInfo.map(({ title, description, meetingPlace, time, contact }) =>
+          <>
+            <p>{title}</p>
+            <p>{description}</p>
+            <p>{meetingPlace}</p>
+            <p>{time}</p>
+            <p>{contact}</p>
+          </>)}
+
+      </Drawer>
     </main>
   )
 }
