@@ -15,13 +15,31 @@ const makeDayClear = (value: Dayjs) => {
 
 export const EVENT_LIST_BY_DAY = (value: Dayjs) => {
     switch (makeDayClear(value)) {
+        case 'July 13':
+            return [{
+                title: 'Young Adults Group!',
+                description: 'As always, we have our Thursday night group! This recurring event is a lovely time to find community and dig into some hard questions together. Hope to see you there!',
+                meetingPlace: '1595 Pearl St, Denver, CO 80203',
+                time: '7:00 PM',
+                contact: 'Tommy Madden (408-355-0639)',
+                rsvpBy: null
+            }];
         case 'July 15':
             return [{
                 title: 'Board Game Night',
-                description: '',
+                description: 'Let\'s get together and play some fun board games! Maybe Blockbuster? Cards Against Humanity? Regardless it\'ll be a fun time!',
                 meetingPlace: '2021 Samuel Drive, Denver, CO 80221',
                 time: '7:00 PM',
                 contact: 'Anna Hallinan (918-894-3391)',
+                rsvpBy: null
+            }];
+        case 'July 20':
+            return [{
+                title: 'Young Adults Group!',
+                description: 'As always, we have our Thursday night group! This recurring event is a lovely time to find community and dig into some hard questions together. Hope to see you there!',
+                meetingPlace: '1595 Pearl St, Denver, CO 80203',
+                time: '7:00 PM',
+                contact: 'Tommy Madden (408-355-0639)',
                 rsvpBy: null
             }];
         case 'July 16':
@@ -51,15 +69,6 @@ export const EVENT_LIST_BY_DAY = (value: Dayjs) => {
                 contact: 'Eric Alvarez (970-889-9261)',
                 rsvpBy: dayjs('July 20'),
             }];
-        case 'July 29':
-            return [{
-                title: 'St. Mary\'s Glacier Hike!',
-                description: '',
-                meetingPlace: '1621 S Allison St, Denver, CO 80232',
-                time: '1:00 PM',
-                contact: 'Tommy Madden (408-355-0639)',
-                rsvpBy: dayjs('July 29 9:00 AM')
-            }];
         case 'July 23':
             return [{
                 title: 'Park Day',
@@ -68,6 +77,24 @@ export const EVENT_LIST_BY_DAY = (value: Dayjs) => {
                 time: '4:00 PM',
                 contact: 'Anna Hallinan (918-894-3391)',
                 rsvpBy: null
+            }];
+        case 'July 27':
+            return [{
+                title: 'Young Adults Group!',
+                description: 'As always, we have our Thursday night group! This recurring event is a lovely time to find community and dig into some hard questions together. Hope to see you there!',
+                meetingPlace: '1595 Pearl St, Denver, CO 80203',
+                time: '7:00 PM',
+                contact: 'Tommy Madden (408-355-0639)',
+                rsvpBy: null
+            }];
+        case 'July 29':
+            return [{
+                title: 'St. Mary\'s Glacier Hike!',
+                description: '',
+                meetingPlace: '1621 S Allison St, Denver, CO 80232',
+                time: '1:00 PM',
+                contact: 'Tommy Madden (408-355-0639)',
+                rsvpBy: dayjs('July 29 9:00 AM')
             }];
         case 'August 1':
             return [{
@@ -78,6 +105,15 @@ export const EVENT_LIST_BY_DAY = (value: Dayjs) => {
                 contact: 'Anna Hallinan (918-894-3391)',
                 rsvpBy: dayjs('July 28'),
             }];
+        case 'August 3':
+            return [{
+                title: 'Young Adults Group!',
+                description: 'As always, we have our Thursday night group! This recurring event is a lovely time to find community and dig into some hard questions together. Hope to see you there!',
+                meetingPlace: '1595 Pearl St, Denver, CO 80203',
+                time: '7:00 PM',
+                contact: 'Tommy Madden (408-355-0639)',
+                rsvpBy: null
+            }];
         case 'August 5':
             return [{
                 title: 'Lake Day',
@@ -86,6 +122,15 @@ export const EVENT_LIST_BY_DAY = (value: Dayjs) => {
                 time: '12:30 PM',
                 contact: 'Eric Alvarez (970-889-9261)',
                 rsvpBy: dayjs('August 3')
+            }];
+        case 'August 10':
+            return [{
+                title: 'Young Adults Group!',
+                description: 'As always, we have our Thursday night group! This recurring event is a lovely time to find community and dig into some hard questions together. Hope to see you there!',
+                meetingPlace: '1595 Pearl St, Denver, CO 80203',
+                time: '7:00 PM',
+                contact: 'Tommy Madden (408-355-0639)',
+                rsvpBy: null
             }];
         case 'August 12':
             return [{
@@ -103,6 +148,15 @@ export const EVENT_LIST_BY_DAY = (value: Dayjs) => {
                 meetingPlace: 'Cheesman Park',
                 time: '1:00 PM',
                 contact: 'Eric Alvarez (970-889-9261)',
+                rsvpBy: null
+            }];
+        case 'August 17':
+            return [{
+                title: 'Young Adults Group!',
+                description: 'As always, we have our Thursday night group! This recurring event is a lovely time to find community and dig into some hard questions together. Hope to see you there!',
+                meetingPlace: '1595 Pearl St, Denver, CO 80203',
+                time: '7:00 PM',
+                contact: 'Tommy Madden (408-355-0639)',
                 rsvpBy: null
             }];
         case 'August 18':
@@ -123,6 +177,15 @@ export const EVENT_LIST_BY_DAY = (value: Dayjs) => {
                 contact: 'Anna Hallinan (918-894-3391)',
                 rsvpBy: null
             }];
+        case 'August 24':
+            return [{
+                title: 'Young Adults Group!',
+                description: 'As always, we have our Thursday night group! This recurring event is a lovely time to find community and dig into some hard questions together. Hope to see you there!',
+                meetingPlace: '1595 Pearl St, Denver, CO 80203',
+                time: '7:00 PM',
+                contact: 'Tommy Madden (408-355-0639)',
+                rsvpBy: null
+            }];
         case 'August 26':
             return [{
                 title: 'Paradise Cove Day Trip!',
@@ -138,6 +201,15 @@ export const EVENT_LIST_BY_DAY = (value: Dayjs) => {
                 description: 'Let\'s head down south for a fun park day at Wash Park! Spikeball encouraged!',
                 meetingPlace: 'Wash Park',
                 time: '1:00 PM',
+                contact: 'Tommy Madden (408-355-0639)',
+                rsvpBy: null
+            }];
+        case 'August 31':
+            return [{
+                title: 'Young Adults Group!',
+                description: 'As always, we have our Thursday night group! This recurring event is a lovely time to find community and dig into some hard questions together. Hope to see you there!',
+                meetingPlace: '1595 Pearl St, Denver, CO 80203',
+                time: '7:00 PM',
                 contact: 'Tommy Madden (408-355-0639)',
                 rsvpBy: null
             }];
