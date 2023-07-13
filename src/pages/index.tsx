@@ -66,13 +66,13 @@ const IndexPage: React.FC<PageProps> = () => {
         placement="bottom"
         height="378"
       >
-        {currentDayInfo.map(({ title, description, meetingPlace, time, contact }) =>
+        {currentDayInfo.map(({ title, description, meetingPlace, time, contact, rsvpBy }) =>
           <>
-            <p>{title}</p>
+            <h2>{title}</h2>
             <p>{description}</p>
-            <p>{meetingPlace}</p>
-            <p>{time}</p>
-            <p>{contact}</p>
+            <p>{meetingPlace} @ {time}</p>
+            <p>Text {contact} for more details!</p>
+            {!!rsvpBy && <p>RSVP Required By {rsvpBy.format('MMMM D')}</p>}
           </>)}
 
       </Drawer>
