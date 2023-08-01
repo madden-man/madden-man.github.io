@@ -1,20 +1,8 @@
 import type { Dayjs } from 'dayjs';
 import dayjs from 'dayjs';
 
-const makeDayClear = (value: Dayjs) => {
-    if (value.month() === 6) {
-        return `July ${value.date()}`;
-    } else if (value.month() === 7) {
-        return `August ${value.date()}`;
-    } else if (value.month() === 8) {
-        return `September ${value.date()}`;
-    } else {
-        return 'you aren\'t summer!!';
-    }
-}
-
 export const EVENT_LIST_BY_DAY = (value: Dayjs) => {
-    switch (makeDayClear(value)) {
+    switch (value.format('MMMM D')) {
         case 'July 13':
             return [{
                 title: 'Young Adults Group!',
