@@ -53,29 +53,24 @@ const IndexPage: React.FC<PageProps> = () => {
   const [isOpen, setOpen] = React.useState(false);
 
   const currentDayInfo = EVENT_LIST_BY_DAY(currentDay);
-
+  const calendarIFrame = (
+  <iframe
+    src="https://calendar.google.com/calendar/embed?src=rpbvnpni8nrocdj8et0usmmbaqjavpkb%40import.calendar.google.com&ctz=America%2FDenver"
+    style={{border: 0, overflow: "hidden" }}>
+  </iframe>
+  )
   return (
     <main style={pageStyles}>
       <div className="bg" />
       <h1>DCC Young Adults!</h1>
-      <Calendar cellRender={cellRender} onSelect={(date) => { setCurrentDay(date); setOpen(true); }} />
-      <Drawer
-        title={currentDay.format('MMMM D')}
-        onClose={() => setOpen(false)}
-        open={isOpen}
-        placement="bottom"
-        height="378"
-      >
-        {currentDayInfo.map(({ title, description, meetingPlace, time, contact, rsvpBy }) =>
-          <>
-            <h2>{title}</h2>
-            <p>{description}</p>
-            <p>{meetingPlace} @ {time}</p>
-            <p>Text {contact} for more details!</p>
-            {!!rsvpBy && <p>RSVP Required By {rsvpBy.format('MMMM D')}</p>}
-          </>)}
-
-      </Drawer>
+      <div className="googleCalendar">
+        <div className="deskContent">
+          {calendarIFrame}
+        </div>
+        <div className="phoneContent">
+          {calendarIFrame}
+        </div>
+      </div>
     </main>
   )
 }

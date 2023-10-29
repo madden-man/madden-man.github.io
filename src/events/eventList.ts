@@ -120,14 +120,15 @@ export const EVENT_LIST_BY_DAY = (value: Dayjs) => {
                 contact: 'Tommy Madden (408-355-0639)',
                 rsvpBy: null
             }];
-        case 'August 12':
+        case 'August 11':
+            
             return [{
-                title: 'White Water Rafting!',
-                description: 'We\'re going white water rafting as a group!',
-                meetingPlace: '1621 S Allison St, Denver, CO 80232',
-                time: '10:30 AM',
-                contact: 'Tommy Madden (408-355-0639)',
-                rsvpBy: dayjs('July 28')
+                title: 'Outback Saloon Night',
+                description: 'Paint the town green!',
+                meetingPlace: 'Outback Saloon',
+                time: '8:00 PM',
+                contact: 'Anna Hallinan (918-894-3391)',
+                rsvpBy: null
             }];
         case 'August 13':
             return [{
@@ -158,12 +159,12 @@ export const EVENT_LIST_BY_DAY = (value: Dayjs) => {
             }];
         case 'August 19':
             return [{
-                title: 'Outback Saloon Night',
-                description: 'Paint the town green!',
-                meetingPlace: 'Outback Saloon',
-                time: '8:00 PM',
+                title: 'Paradise Cove Day Trip!',
+                description: 'How would you like to experience paradise? With a bit of hiking and a quick two hour drive made fun with laughter and camaraderie, Paradise Cove is the perfect place for you to cliff jump, relax, and rejuvenate your senses!',
+                meetingPlace: '2021 Samuel Drive, Denver, CO 80221',
+                time: '9:30 AM',
                 contact: 'Anna Hallinan (918-894-3391)',
-                rsvpBy: null
+                rsvpBy: dayjs('August 24')
             }];
         case 'August 24':
             return [{
@@ -176,12 +177,12 @@ export const EVENT_LIST_BY_DAY = (value: Dayjs) => {
             }];
         case 'August 26':
             return [{
-                title: 'Paradise Cove Day Trip!',
-                description: 'How would you like to experience paradise? With a bit of hiking and a quick two hour drive made fun with laughter and camaraderie, Paradise Cove is the perfect place for you to cliff jump, relax, and rejuvenate your senses!',
-                meetingPlace: '2021 Samuel Drive, Denver, CO 80221',
-                time: '9:30 AM',
-                contact: 'Anna Hallinan (918-894-3391)',
-                rsvpBy: dayjs('August 24')
+                title: 'White Water Rafting!',
+                description: 'We\'re going white water rafting as a group!',
+                meetingPlace: '1621 S Allison St, Denver, CO 80232',
+                time: '10:30 AM',
+                contact: 'Tommy Madden (408-355-0639)',
+                rsvpBy: dayjs('July 28')
             }];
         case 'August 27':
             return [{
